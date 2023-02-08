@@ -15,4 +15,4 @@ site.css
 - Line 13: Incorrect spelling of width.
 
 In the TipCalculator Model the breakpoint is set at Line 15.  It should multiply not divide.
--Line 15: var tip = MealCost.Value * percent;
+- Line 15: var tip = MealCost.Value * percent;
