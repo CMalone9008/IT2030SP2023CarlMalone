@@ -1,1 +1,1 @@
-
+In this weeks lab we added two more pages to our website.  We added the Contact information page as well as the About page.  This included adding models and controllers to the application.  We made subtle changes to the navigation bar as well as changing the layout of the home page(putting text into columns/adding img-fluid rounded property).  In our About page we had to develop a breif history of the company section, a mission statement, and describe our vision as company moving forward. 
