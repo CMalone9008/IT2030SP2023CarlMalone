@@ -1,0 +1,68 @@
+﻿@model ContactModel
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<h1>
+    @ViewData["Title"]
+</h1>
+<div class="border-bottom box-shadow mb-3">
+    <p>5505 Random Rd. Cleveland, Ohio 44106</p>
+    <p>216-555-5555</p>
+    <p>CarlsWacthes@gamail.com</p>
+    <p class="text-align-right">
+        Open 8am-5pm 
+    </p>
+</div>
+
+@*Missing validation messages
+You were almost there
+using the code on page 105 of the textbook (2nd edition)*@
+<div class="container">  @*line added*@
+<form asp-action="Index" method="post">
+
+    <div class="row">  @*repeat for each field*@
+        <label asp-for="firstName" class="col-md-2 col-form-label">First Name</label>
+        <div class="col-md-2">
+            <input asp-for="firstName" class="form-control"/>
+        </div>
+        <span asp-validation-for="firstName" class="col text-danger"></span>
+    </div>
+
+    <div class ="row">
+            <label asp-for="lastName" class="col-md-2 col-form-label">Last Name</label>
+            <div class="col-md-2">
+                <input asp-for="lastName" class="form-control" />
+            </div>
+            <span asp-validation-for="lastName" class="col text-danger"></span>
+    </div>
+
+    <div>  @*repeat for address field, same as first name & last name*@
+        <label asp-for="address">Address</label>
+        <input asp-for="address"/>
+    </div>
+
+    <div> @*repeat for phone field, same as first name & last name*@
+        <label asp-for="phone">Phone</label>
+        <input asp-for="phone"/>
+    </div>
+
+    <div> @*repeat for email field, same as first name & last name*@
+        <label asp-for="email">Email</label>
+        <input asp-for="email"/>
+    </div>
+
+    <div> @*repeat for message field, same as first name & last name*@
+        <label asp-for="message">Message</label>
+        <input asp-for="message"/>
+    </div>
+
+    <div class="row">
+        <div class="col offset-md-2">
+            <button type="submit" class="btn btn-primary">Send</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Clear</a>
+        </div>
+    </div>
+</form>
+</div>
+
